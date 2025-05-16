@@ -1,0 +1,10 @@
+# utils/setup.yaml
+maze:
+  - [1, 1, 1, 1, 1]
+  - [1, 1, 1, 1, 1]
+  - [1, 1, 1, 1, 1]
+  - [1, 1, 1, 1, 1]
+  - [1, 1, 1, 1, 1]
+terminal_states:
+  - { x: 1, y: 1, value: 10, terminal: true }
+  - { x: 3, y: 3, value: 10, terminal: true }
