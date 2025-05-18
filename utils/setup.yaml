@@ -1,10 +1,15 @@
 # utils/setup.yaml
 maze:
-  - [1, 1, 1, 1, 1]
-  - [1, 1, 1, 1, 1]
-  - [1, 1, 1, 1, 1]
-  - [1, 1, 1, 1, 1]
-  - [1, 1, 1, 1, 1]
-terminal_states:
-  - { x: 1, y: 1, value: 10, terminal: true }
-  - { x: 3, y: 3, value: 10, terminal: true }
+  - [-1, -1, -1, -1]
+  - [-1, -1, -1, -1]
+  - [-1, -1, -1, -1]
+  - [-1, -1, -1, -1]
+
+custom_states:
+  - { x: 3, y: 0, value: 40, terminal: true }
+  - { x: 0, y: 3, value: 10, terminal: true }
+  - { x: 2, y: 1, value: 10, terminal: false }
+  - { x: 3, y: 1, value: 10, terminal: false }
+
+agent_start_pos:
+  - { x: 0, y: 0 }
