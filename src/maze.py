@@ -8,7 +8,7 @@ class Maze:
         self.yaml_path = yaml_path
         self.grid = self.grid_init()
     
-    # Gebruikt yaml file voor initialisatie van het doolhof
+    # Gebruikt yaml file voor initialisatie van de maze
     def grid_init(self):
         with open(self.yaml_path, 'r') as f:
             data = yaml.safe_load(f)
