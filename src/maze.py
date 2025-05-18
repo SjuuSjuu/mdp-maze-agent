@@ -1,4 +1,5 @@
 import yaml
+from random_agent import Agent
 
 yaml_path="utils/setup.yaml"
 
@@ -31,29 +32,26 @@ class Maze:
 
     # Move: direction 1=up, 2=right, 3=down, 4=left
     def action(self, direction):
-        dx, dy = 0, 0
+        moves = {
+            1: (0, -1),  # up
+            2: (1, 0),   # right
+            3: (0, 1),   # down
+            4: (-1, 0)   # left
+        }
 
-        if direction == 1:
-            dy = -1
-        elif direction == 2:
-            dx = 1
-        elif direction == 3:
-            dy = 1
-        elif direction == 4:
-            dx = -1
-        else:
+        if direction not in moves:
             print("Invalid direction")
-            return self.agent_pos  # no change
+            return self.agent_pos
 
+        dx, dy = moves[direction]
         new_x = self.agent_pos[0] + dx
         new_y = self.agent_pos[1] + dy
 
-        # Boundary check
         if 0 <= new_x < len(self.grid[0]) and 0 <= new_y < len(self.grid):
-            self.agent_pos = [new_x, new_y]  # valid move
-        # else: do nothing, stay in place
+            self.agent_pos = [new_x, new_y]
 
         return self.agent_pos
+
 
     def access_position(self, x,y):
         return self.grid[x][y]
