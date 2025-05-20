@@ -47,7 +47,7 @@ Een function die het Value Iteration algoritme implementeert en:
 
 ## Hoe te gebruiken
 
-1. **Installeer Python 3.13.
+1. **Installeer Python 3.13.**
 
 2. **Clone of download deze repository.**
 
